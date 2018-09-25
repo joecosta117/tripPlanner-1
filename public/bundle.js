@@ -104,7 +104,18 @@ eval("/* Mapbox GL JS is licensed under the 3-Clause BSD License. Full text of l
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const mapboxgl = __webpack_require__(/*! mapbox-gl */ \"./node_modules/mapbox-gl/dist/mapbox-gl.js\");\n\nmapboxgl.accessToken = \"pk.eyJ1IjoidmFoYWttZWR6IiwiYSI6ImNqbWk2b3lpdTAxdGczdm9jZ3poZ3pqY3gifQ.0dPoFUt1OyfdiaAzNLRgxg\";\n\nconst map = new mapboxgl.Map({\n  container: \"map\",\n  center: [-74.009, 40.705], // FullStack NY coordinates; alternatively, use [-87.6354, 41.8885] for Chicago\n  zoom: 12, // starting zoom\n  style: \"mapbox://styles/mapbox/streets-v10\" // mapbox has lots of different map styles available.\n});\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const mapboxgl = __webpack_require__(/*! mapbox-gl */ \"./node_modules/mapbox-gl/dist/mapbox-gl.js\");\nconst buildMarker = __webpack_require__(/*! ./marker */ \"./src/marker.js\");\n\nmapboxgl.accessToken = \"pk.eyJ1IjoidmFoYWttZWR6IiwiYSI6ImNqbWk2b3lpdTAxdGczdm9jZ3poZ3pqY3gifQ.0dPoFUt1OyfdiaAzNLRgxg\";\n\nconst map = new mapboxgl.Map({\n  container: \"map\",\n  center: [-74.009, 40.705], \n  zoom: 12, \n  style: \"mapbox://styles/mapbox/streets-v10\"\n});\n\nconst markerDomEl = document.createElement(\"div\");\nmarkerDomEl.style.width = \"32px\";\nmarkerDomEl.style.height = \"39px\";\nmarkerDomEl.style.backgroundImage = \"url(http://i.imgur.com/WbMOfMl.png)\";\n// markerDomEl.style.backgroundImage = `url${markerImage(type)}`;\n\n// new mapboxgl.Marker(markerDomEl).setLngLat([-74.009, 40.705]).addTo(map); \n\nmodule.exports = map;\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/marker.js":
+/*!***********************!*\
+  !*** ./src/marker.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module parse failed: Unexpected token (28:2)\\nYou may need an appropriate loader to handle this file type.\\n| \\t\\tzoom: 12,\\n| \\t\\tstyle: \\\"mapbox://styles/mapbox/streets-v10\\\"\\n> \\t\\ttype: markerImage(type);\\n| \\t})\\n| }\");\n\n//# sourceURL=webpack:///./src/marker.js?");
 
 /***/ })
 
